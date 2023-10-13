@@ -98,3 +98,10 @@ Generate the classification reports for the test sets using the classification_r
 Store the results in classification_rep1 and classification_rep2.
 
 Print the best hyperparameters and classification reports for both priority_score and problem_domain.
+
+<!-- Pseudocode of exporting the classification machine learning model -->
+
+Import the `joblib` library.
+
+Export the priority_score model using the `joblib.dump()` method and save it to the specified file path.
+Export the problem_domain model using the `joblib.dump()` method and save it to the specified file path.

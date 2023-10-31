@@ -105,3 +105,25 @@ Import the `joblib` library.
 
 Export the priority_score model using the `joblib.dump()` method and save it to the specified file path.
 Export the problem_domain model using the `joblib.dump()` method and save it to the specified file path.
+
+<!-- Pseudocode of implementing the classification model in the web app -->
+
+Import the necessary libraries including gradio, torch, joblib, numpy, pandas, and AutoTokenizer and AutoModel
+
+Load the IndoBERT tokenizer and model using the AutoTokenizer.
+
+Create two mapping dictionaries for the labels.
+
+Load the trained Random FOrest model using the joblib.load() method.
+
+Define a function predict(text) that takes in a text input and performs the following steps:
+Convert the text input into input features using the tokenizer.
+Perform word embedding using IndoBERT model.
+Convert the embeddings to a numpy array.
+Ensure that the embeddings has exactly n features.
+Predict the priority_score and problem_domain for the custom input using the trained Random Forest model.
+Map the numerical labels to human-readable labels.
+Return the predicted priority_score and problem_domain.
+Create a Gradio Interface using the gr.Interface()
+
+Launch the Gradio Interface using the launch()m ethod.
